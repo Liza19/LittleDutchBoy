@@ -152,5 +152,78 @@
                 <action id="-26" name="Restart layout" sid="2846696369748188" type="System" />
             </actions>
         </event-block>
+        <event-block sid="695405754196366">
+            <conditions>
+                <condition id="11" name="On Nth touch end" sid="5508073989722793" type="Touch">
+                    <param id="0" name="Touch number">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3028969127469883" type="BigHole" />
+                <action id="-9" name="Destroy" sid="8348727130870389" type="BigHoleParticles" />
+                <action id="-11" name="Subtract from" sid="7211903469231108" type="System">
+                    <param id="0" name="Variable">waterLevel</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-10" name="Add to" sid="2797929000061555" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8005774253340222" type="Score">
+                    <param id="0" name="Text">Score</param>
+                </action>
+                <action id="-3" name="Create object" sid="7304525974270317" type="System">
+                    <param id="0" name="Object to create">BigHolePlug</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">BigHole.X</param>
+                    <param id="3" name="Y">BigHole.Y</param>
+                </action>
+                <action id="25" name="Play at object" sid="8378011682819817" type="Audio">
+                    <param id="0" name="Audio file">Large Bubble-SoundBible.com-1084083477</param>
+                    <param id="1" name="Loop">1</param>
+                    <param id="2" name="Volume">0</param>
+                    <param id="3" name="Object">BigHoleParticles</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7432619399016139">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7542543897812067" type="System">
+                    <param id="0" name="Interval (seconds)">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="5446181701991205" type="System">
+                    <param id="0" name="Object to create">BigHole</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(TiledBackground.Width)</param>
+                    <param id="3" name="Y">random(TiledBackground.Height)</param>
+                </action>
+                <action id="-3" name="Create object" sid="1129653978427126" type="System">
+                    <param id="0" name="Object to create">BigHoleParticles</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">BigHole.X</param>
+                    <param id="3" name="Y">BigHole.Y</param>
+                </action>
+                <action id="-10" name="Add to" sid="5193238306112195" type="System">
+                    <param id="0" name="Variable">waterLevel</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+                <action id="25" name="Play at object" sid="7682875894284264" type="Audio">
+                    <param id="0" name="Audio file">Crumbling-Mike_Koenig-1123041125</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">0</param>
+                    <param id="3" name="Object">BigHole</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
